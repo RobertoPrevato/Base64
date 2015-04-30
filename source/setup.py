@@ -1,3 +1,4 @@
+import os
 import sys
 from cx_Freeze import setup, Executable
 
@@ -11,8 +12,8 @@ from cx_Freeze import setup, Executable
 #
 build_exe_options = {"packages": ["os", "core", "lib"] }
 
-# NB: change executable to have the right path for you!
-executablePath = "C:\\Root\\Projects\\Base64\\source\\base64-pics.py"
+# NB: if needed, change the path
+executablePath = os.path.join(os.getcwd(), "base64-pics.py")
 
 setup(
 	name = "Base64Pics",
