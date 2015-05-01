@@ -1,5 +1,6 @@
 # Base64
-Pictures to base64 encoded strings bulk converter. Speeds up CSS development, preparing proper **background-image properties** with base64 encoded pictures.
+Pictures to base64 encoded strings bulk converter. Speeds up CSS development, preparing **background-image properties** with base64 encoded pictures.
+![Example](https://github.com/RobertoPrevato/Base64/blob/master/docs/images/generated-css.png)
 
 **Features**:
 - Allows to bulk convert pictures found under a given path, packing base64 encoded strings inside CSS or CSV
