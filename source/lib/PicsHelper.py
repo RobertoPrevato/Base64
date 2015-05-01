@@ -29,7 +29,7 @@ def generateBase64File(path, filename, mode):
 		
 		if mode == "css":
 			f.append("/* picture: {} */".format(name))
-			f.append(".{} {}".format(name, "{"))
+			f.append(".{} {}".format(name.replace(".", "-"), "{"))
 			
 			# picture:
 			with open(p, "rb") as image_file:
