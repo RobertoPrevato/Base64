@@ -13,12 +13,12 @@ from cx_Freeze import setup, Executable
 build_exe_options = {"packages": ["os", "core", "lib"] }
 
 # NB: if needed, change the path
-executablePath = os.path.join(os.getcwd(), "base64-pics.py")
+executable_path = os.path.join(os.getcwd(), "base64pics.py")
 
 setup(
-	name = "Base64Pics",
-	version = "1.0",
-	description = "Pictures to base64 encoded bulk converter. Converts pictures into css properties containing the Base64 encoded string.",
-	options = {"build_exe": build_exe_options},
-	executables = [Executable(executablePath)]
+    name = "Base64Pics",
+    version = "1.0",
+    description = "Pictures to base64 encoded bulk converter. Converts pictures into css properties containing the Base64 encoded string.",
+    options = {"build_exe": build_exe_options},
+    executables = [Executable(executable_path)]
 )

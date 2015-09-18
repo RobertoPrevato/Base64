@@ -1,0 +1,5 @@
+## Ignore Linux files ending with ~
+*~
+# Ignore pyc files
+*.pyc
+
