@@ -52,14 +52,15 @@ def generate_base64_file(path, filename, mode):
             
 def get_descriptor_by_extension(ext):
     options = {
-    ".jpg" : "image/jpeg",
-    ".jpeg" : "image/jpeg",
-    ".jpe" : "image/jpeg",
-    ".jif" : "image/jpeg",
-    ".jfif" : "image/jpeg",
-    ".jfi" : "image/jpeg",
-    ".png" : "image/png",
-    ".gif" : "image/gif",
+    ".jpg": "image/jpeg",
+    ".jpeg": "image/jpeg",
+    ".jpe": "image/jpeg",
+    ".jif": "image/jpeg",
+    ".jfif": "image/jpeg",
+    ".jfi": "image/jpeg",
+    ".png": "image/png",
+    ".gif": "image/gif",
+    ".svg": "image/svg+xml"
     }
     k = options.get(ext.lower())
     if k is None:

@@ -18,51 +18,9 @@ class Traverser:
             a = a + self.get_files(path + os.sep + b)
         return a
 
-class JsTraverser(Traverser):
-    def __init__(self):
-        self.ext = "js"
-        
-    def include(self, f):
-        p = re.compile("\.{}$".format(self.ext), re.IGNORECASE)
-        return p.search(f) is not None and not "main.built.js" in f.lower()
-
-class TxtTraverser(Traverser):
-    def __init__(self):
-        self.ext = "txt"
-        
-    def include(self, f):
-        p = re.compile("\.txt$", re.IGNORECASE)
-        return p.search(f) is not None
-
-class CsvTraverser(Traverser):
-    def __init__(self):
-        self.ext = "csv"
-
-    def include(self, f):
-        p = re.compile("\.csv$", re.IGNORECASE)
-        return p.search(f) is not None
-
-class HtmlTraverser(Traverser):
-    def __init__(self):
-        self.ext = "html"
-
-    def include(self, f):
-        p = re.compile("\.html$|\.htm$", re.IGNORECASE)
-        return p.search(f) is not None
-
-class HbsTraverser(Traverser):
-    def __init__(self):
-        self.ext = "hbs"
-
-    def include(self, f):
-        p = re.compile("\.hbs", re.IGNORECASE)
-        return p.search(f) is not None
-
 class PicsTraverser(Traverser):
     def __init__(self):
-        self.ext = ";".join(['jpg', 'jpeg', 'jpe', 'png'])
+        self.ext = re.compile("\.jpg$|\.jpeg$|\.jpe$|\.png$|\.gif|\.svg$", re.IGNORECASE)
         
     def include(self, f):
-        p = re.compile("\.jpg$|\.jpeg$|\.jpe$|\.png$|\.gif$", re.IGNORECASE)
-        return p.search(f) is not None
-        
+        return self.ext.search(f) is not None
