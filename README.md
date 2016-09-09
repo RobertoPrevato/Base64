@@ -4,7 +4,7 @@ Pictures to base64 encoded strings bulk converter. Speeds up CSS development, pr
 
 **Features**:
 - Allows to bulk convert pictures found under a given path, packing base64 encoded strings inside CSS or CSV
-- Supports conversion of png, jpg, gif (also animated gif)
+- Supports conversion of png, jpg, gif (also animated gif), svg
 - Console application with documented interface (includes *--help*)
 - Cross platform: being in Python, it can run on Linux, Windows and Mac
 
